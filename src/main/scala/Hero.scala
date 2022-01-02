@@ -16,13 +16,13 @@ class Hero extends HeroTraits {
     }
 
 
-     override def walk(): Unit =  {
-        println(name + " is walking")
-    }
+     //override def walk(): Unit =  {
+        //println(name + " is walking")
+    //}
 
-    override def run(): Unit = {
-        println("is running away")
-    }
+    //override def run(): Unit = {
+        //println("is running away")
+    //}
 
     override def takeDamage(): Unit = {
         println(name + " has taken damage!!!")

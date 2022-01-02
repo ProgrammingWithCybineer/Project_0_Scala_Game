@@ -1,0 +1,21 @@
+Scala game needs
+    - hero
+    - weapon
+    - choice options
+    - database to store something
+    - should be able to store what happens in game into external text file
+    -  must be able to update the hero with new weapons etc..
+
+
+    - Your application must be able to and store the data contained within those files in a database
+    - Your application should be able to have basic CRUD functionalities
+    - Your application should have a CLI where users can interact with the application while it is running
+    - Your application should be able to log all activities during runtime and store logs into an external text file
+
+
+    
+    
+    
+    
+    
+    
