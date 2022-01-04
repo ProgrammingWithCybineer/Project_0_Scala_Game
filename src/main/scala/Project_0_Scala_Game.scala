@@ -59,12 +59,13 @@ object Project_0_Scala_Game {
                 }else if(pet == "do not pet"){
                     println(" you should have petted the fairy. You have lost one health")
                     //takeDamage()
-                    println(" Your health level is now 2")
                     health -=1
+                    println(" Your health level is now 2")
                     babyDragonDamage()
                 }
             //pets fairy
             def babyDragon(){
+                println("")
                 println(" Good job, you petted a fairy")
                 println("")
                 println(" You didn't lose any health points. ")
@@ -87,11 +88,10 @@ object Project_0_Scala_Game {
             
             // do not pet fairy
             def babyDragonDamage(){
+                println("")
                 println(" After not petting the fairy you continuing your journey")
                 println("")
                 println(" You currently have 2 health points left")
-                println("")
-                println(" The next creature that comes to you is a baby dragon. Do you pet the baby or do not pet the baby")
                 println("")
                 println(" The next create that comes to you in a baby dragon. Do you pet it or do not pet")
                 println("")
@@ -102,7 +102,6 @@ object Project_0_Scala_Game {
                     goldUnicorn()
                     println(" Your health is still at 2.... good luck")
                 }else if (pet == "do not pet") {
-                    println(" Great choice not to pet the baby dragon. The Mommy dragon may have eaten you.")
                     goldUnicorn()
                     
 
@@ -115,48 +114,57 @@ object Project_0_Scala_Game {
                     //health = health
 
                         
-                }
-            }
+                
 
             
 
-            def goldUnicorn(){
-                println("")
-                println(" Why would anyone pet a baby dragon. You are very lucky the mommy dragon didn't eat you")
-                println("")
-                println(" Your health is now 2. If you lose another health point, your game is over")
-                println("")
-                println("The final creature in your test is a Gold Unicorn. pet it or do not pet")
-                var pet =  (scanner.nextLine())
-
-                //didnt pet fairy, pet baby dragon, pet gold unicorn
-                if (pet == "pet it"){
-                    println(" You never touch the gold Unicorn. You have lost all your health. Your game is over")
+                def goldUnicorn(){
                     println("")
-                    println(" You have lost all your health. Your GAME IS OVER")
-                    game = false
-
-                //pet fairy, didn't pet baby dragon, didn't pet gold unicorn    
-                }else if (pet == "do not pet" && health == 3) {
-                    println("Good choice not to pet the Gold Unicorn. You have ended the game with all your health points ")
-                    println("Great Job. You have WON THE GAME")
-                    game = false
-
-                // didn't pet fairy, pet baby dragon, didn't pet gold unicorn    
-                }else if (pet == "do not pet" && health == 2) {
-                    println("Good choice not to pet the Gold Unicorn. You have ended the game with 2 points. ")
-                    println("Well done. You have WON THE GAME")
-                    game = false
-
-                // didn't pet fairy, pet baby dragon, didnt pet gold unicorn    
-                }else if (pet == "do not pet" && health == 1){
-                    println(" It's always a good idea to never touch the mystical unicorn. You have ended the game with 1 point.")
+                    println("Good Choice... Why would anyone pet a baby dragon. You are very lucky the mommy dragon didn't eat you")
                     println("")
-                    println("You could have done better. But either way,  You have WON THE GAME")
-                    game = false
+                    println(" Your health is now 2. Your health points are getting low. Be careful.")
+                    println("")
+                    println("The final creature in your test is a Gold Unicorn. pet it or do not pet")
+                    var pet =  (scanner.nextLine())
+
+                    //didnt pet fairy, pet baby dragon, pet gold unicorn
+                    if (pet == "pet it"){
+                        println(" You never touch the gold Unicorn. You have lost all your health. Your game is over")
+                        println("")
+                        println(" You have lost all your health. Your GAME IS OVER")
+                        game = false
+
+                    //pet fairy, didn't pet baby dragon, didn't pet gold unicorn    
+                    }else if (pet == "do not pet" && health == 3) {
+                        println("Good choice not to pet the Gold Unicorn. You have ended the game with all your health points ")
+                        println("Great Job. You have WON THE GAME")
+                        game = false
+
+                    // didn't pet fairy, pet baby dragon, didn't pet gold unicorn    
+                    }else if (pet == "do not pet" && health == 2) {
+                        println("Good choice not to pet the Gold Unicorn. You have ended the game with 2 points. ")
+                        println("Well done. You have WON THE GAME")
+                        game = false
+
+                    // didn't pet fairy, pet baby dragon, didnt pet gold unicorn    
+                    }else if (pet == "do not pet" && health == 1){
+                        println(" It's always a good idea to never touch the mystical unicorn. You have ended the game with 1 point.")
+                        println("")
+                        println("You could have done better. But either way,  You have WON THE GAME")
+                        game = false
+                    }
                 }
-            }
+   
+   
+        }
     }
+   
+   
+   
+   
+   
+}
+
 
 
 
