@@ -16,6 +16,15 @@ object Project_0_Scala_Game {
 
     }
 
+    def takeDamage(): Unit = {
+        println("")
+        println(name + " has taken damage!!!")
+        health -= 1
+        println("")
+        println(name + " your health level is " + health)
+        println("")
+    }
+
     // Requesting players name    
     println("Please type your name: ")
     var name = (scanner.nextLine())
@@ -57,12 +66,13 @@ object Project_0_Scala_Game {
                     health == health
                     babyDragon()
                 }else if(pet == "do not pet"){
-                    println(" you should have petted the fairy. You have lost one health")
-                    //takeDamage()
-                    health -=1
-                    println(" Your health level is now 2")
+                    println("")
+                    println(" you should have petted the fairy, it's just a fairy. Don't be chicken. You have lost 1 health")
+                    takeDamage()
+                    //health -=1
                     babyDragonDamage()
                 }
+                
             //pets fairy
             def babyDragon(){
                 println("")
@@ -75,11 +85,11 @@ object Project_0_Scala_Game {
                 var pet =  (scanner.nextLine())
                 if (pet == "pet it"){
                     println(" You are brave but that was a silly choice")
-                    health = -1
-                    return goldUnicorn()
+                    takeDamage()
+                    goldUnicorn()
                     
                 }else if (pet == "do not pet") {
-                    println(" Wise decision not to touch a dragon's baby.")
+                    //println(" Wise decision not to touch a dragon's baby.")
                     goldUnicorn()
 
                 }
@@ -97,10 +107,10 @@ object Project_0_Scala_Game {
                 println("")
                 var pet =  (scanner.nextLine())
                 if (pet == "pet it"){
-                    println(" You are brave and did not lose any health from your choice")
-                    health = -1
-                    goldUnicorn()
-                    println(" Your health is still at 2.... good luck")
+                    println(" You are brave but silly")
+                    takeDamage()
+                    goldUnicornDamage()
+                    //println(" Your health is still at 2.... good luck")
                 }else if (pet == "do not pet") {
                     goldUnicorn()
                     
@@ -120,9 +130,9 @@ object Project_0_Scala_Game {
 
                 def goldUnicorn(){
                     println("")
-                    println("Good Choice... Why would anyone pet a baby dragon. You are very lucky the mommy dragon didn't eat you")
+                    println("Good Choice... Why would anyone pet a baby dragon. The mommy dragon would have eaten you.")
                     println("")
-                    println(" Your health is now 2. Your health points are getting low. Be careful.")
+                    //println(" Your health is now 2. Your health points are getting low. Be careful.")
                     println("")
                     println("The final creature in your test is a Gold Unicorn. pet it or do not pet")
                     var pet =  (scanner.nextLine())
@@ -131,19 +141,27 @@ object Project_0_Scala_Game {
                     if (pet == "pet it"){
                         println(" You never touch the gold Unicorn. You have lost all your health. Your game is over")
                         println("")
+                        takeDamage()
                         println(" You have lost all your health. Your GAME IS OVER")
                         game = false
 
                     //pet fairy, didn't pet baby dragon, didn't pet gold unicorn    
                     }else if (pet == "do not pet" && health == 3) {
                         println("Good choice not to pet the Gold Unicorn. You have ended the game with all your health points ")
+                        println("")
                         println("Great Job. You have WON THE GAME")
+                        println("")
+                        println(" Total health points left: " + health )
                         game = false
+                        // DOESNT END GAME LOOP
 
                     // didn't pet fairy, pet baby dragon, didn't pet gold unicorn    
                     }else if (pet == "do not pet" && health == 2) {
                         println("Good choice not to pet the Gold Unicorn. You have ended the game with 2 points. ")
+                        println("")
                         println("Well done. You have WON THE GAME")
+                        println("")
+                        println(" Total health points left: " + health )
                         game = false
 
                     // didn't pet fairy, pet baby dragon, didnt pet gold unicorn    
@@ -151,9 +169,50 @@ object Project_0_Scala_Game {
                         println(" It's always a good idea to never touch the mystical unicorn. You have ended the game with 1 point.")
                         println("")
                         println("You could have done better. But either way,  You have WON THE GAME")
+                        println("")
+                        println(" Total health points left: " + health )
                         game = false
                     }
                 }
+
+
+                def goldUnicornDamage(){
+                     println("")
+                //     println("Why would anyone pet a baby dragon. The mommy dragon could have eaten you")
+                //     println("")
+                //     println("The final creature in your test is a Gold Unicorn. pet it or do not pet")
+                //     var pet =  (scanner.nextLine())
+
+                //     //didnt pet fairy, pet baby dragon, pet gold unicorn
+                //     if (pet == "pet it"){
+                //         println(" You never touch the gold Unicorn.")
+                //         println("")
+                //         takeDamage()
+                //         println(" You have lost all your health. Your GAME IS OVER")
+                //         println("")
+                //         println(" Total health points left: " + health )
+                //         println("")
+                //         game = false
+
+                    
+                //     // didn't pet fairy, pet baby dragon, didn't pet gold unicorn    
+                //     }else if (pet == "do not pet" && health == 2) {
+                //         println("Good choice not to pet the Gold Unicorn. You have ended the game with 2 points. ")
+                //         println("Well done. You have WON THE GAME")
+                //         println(" Total health points left: " + health )
+                //         println("")
+                //         game = false
+
+                //     // didn't pet fairy, pet baby dragon, didnt pet gold unicorn    
+                //     }else if (pet == "do not pet" && health == 1){
+                //         println(" It's always a good idea to never touch the mystical unicorn. You have ended the game with 1 point.")
+                //         println("")
+                //         println("You could have done better. But either way,  You have WON THE GAME")
+                //         println(" Total health points left: " + health )
+                //         println("")
+                //         game = false
+                //     }
+                 }
    
    
         }

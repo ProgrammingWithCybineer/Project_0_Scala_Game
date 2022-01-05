@@ -1,8 +1,8 @@
-class Hero extends HeroTraits {
+class Hero {
 
 
     private var name = ""
-    private var weapon = ""
+    //private var weapon = ""
     private var health = 0
 
 
@@ -10,7 +10,7 @@ class Hero extends HeroTraits {
     def this(name:String, weapon: String, health: Int ){
         this()
         this.name = name
-        this.weapon = weapon
+        //this.weapon = weapon
         this.health = health
 
     }
@@ -24,7 +24,7 @@ class Hero extends HeroTraits {
         //println("is running away")
     //}
 
-    override def takeDamage(): Unit = {
+     def takeDamage(): Unit = {
         println(name + " has taken damage!!!")
         health -= 1
         println(name + " your health level is " + health)
