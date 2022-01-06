@@ -1,4 +1,4 @@
-[debug] [project_0_scala_game-build] Classpath dependencies List()
-[debug] [project_0_scala_game-build] Dependencies from configurations List()
-[debug] Bloop wrote the configuration of project 'project_0_scala_game-build' to 'C:\Users\Cybineer\Desktop\Project_0_Scala_Game\project\.bloop\project_0_scala_game-build.json'
-[success] Generated .bloop\project_0_scala_game-build.json
+[0m[[0m[0mdebug[0m] [0m[0m[project_0_scala_game-build] Classpath dependencies List()[0m
+[0m[[0m[0mdebug[0m] [0m[0m[project_0_scala_game-build] Dependencies from configurations List()[0m
+[0m[[0m[0mdebug[0m] [0m[0mBloop wrote the configuration of project 'project_0_scala_game-build' to 'C:\Users\Cybineer\Desktop\Project_0_Scala_Game\project\.bloop\project_0_scala_game-build.json'[0m
+[0m[[0m[32msuccess[0m] [0m[0mGenerated .bloop\project_0_scala_game-build.json[0m

@@ -16,7 +16,9 @@
         ],
         "classpath": [
             "C:\\Users\\Cybineer\\Desktop\\Project_0_Scala_Game\\.bloop\\project_0_scala_game\\scala-2.11\\classes",
-            "C:\\Users\\Cybineer\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.11.12\\scala-library-2.11.12.jar"
+            "C:\\Users\\Cybineer\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.11.12\\scala-library-2.11.12.jar",
+            "C:\\Users\\Cybineer\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\mysql\\mysql-connector-java\\8.0.19\\mysql-connector-java-8.0.19.jar",
+            "C:\\Users\\Cybineer\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\google\\protobuf\\protobuf-java\\3.6.1\\protobuf-java-3.6.1.jar"
         ],
         "out": "C:\\Users\\Cybineer\\Desktop\\Project_0_Scala_Game\\.bloop\\project_0_scala_game",
         "classesDir": "C:\\Users\\Cybineer\\Desktop\\Project_0_Scala_Game\\.bloop\\project_0_scala_game\\scala-2.11\\test-classes",
@@ -126,6 +128,40 @@
                             "name": "scala-library",
                             "classifier": "sources",
                             "path": "C:\\Users\\Cybineer\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.11.12\\scala-library-2.11.12-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "mysql",
+                    "name": "mysql-connector-java",
+                    "version": "8.0.19",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "mysql-connector-java",
+                            "path": "C:\\Users\\Cybineer\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\mysql\\mysql-connector-java\\8.0.19\\mysql-connector-java-8.0.19.jar"
+                        },
+                        {
+                            "name": "mysql-connector-java",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Cybineer\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\mysql\\mysql-connector-java\\8.0.19\\mysql-connector-java-8.0.19-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.protobuf",
+                    "name": "protobuf-java",
+                    "version": "3.6.1",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "protobuf-java",
+                            "path": "C:\\Users\\Cybineer\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\google\\protobuf\\protobuf-java\\3.6.1\\protobuf-java-3.6.1.jar"
+                        },
+                        {
+                            "name": "protobuf-java",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Cybineer\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\google\\protobuf\\protobuf-java\\3.6.1\\protobuf-java-3.6.1-sources.jar"
                         }
                     ]
                 },
