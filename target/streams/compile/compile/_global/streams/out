@@ -1,0 +1,22 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Cybineer\Desktop\Project_0_Scala_Game\src\main\scala\Project_0_Scala_Game.scala:291:35: value getString is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m                 print(resultSet3.getString(1) + " " + resultSet3.getString(2) + " " + resultSet3.getString(3) + " " + resultSet3.getString(4) + " " + resultSet3.getString(5) + " " + resultSet3.getString(6) + " " + resultSet3.getString(7))[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Cybineer\Desktop\Project_0_Scala_Game\src\main\scala\Project_0_Scala_Game.scala:291:67: value getString is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m                 print(resultSet3.getString(1) + " " + resultSet3.getString(2) + " " + resultSet3.getString(3) + " " + resultSet3.getString(4) + " " + resultSet3.getString(5) + " " + resultSet3.getString(6) + " " + resultSet3.getString(7))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Cybineer\Desktop\Project_0_Scala_Game\src\main\scala\Project_0_Scala_Game.scala:291:99: value getString is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m                 print(resultSet3.getString(1) + " " + resultSet3.getString(2) + " " + resultSet3.getString(3) + " " + resultSet3.getString(4) + " " + resultSet3.getString(5) + " " + resultSet3.getString(6) + " " + resultSet3.getString(7))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Cybineer\Desktop\Project_0_Scala_Game\src\main\scala\Project_0_Scala_Game.scala:291:131: value getString is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m                 print(resultSet3.getString(1) + " " + resultSet3.getString(2) + " " + resultSet3.getString(3) + " " + resultSet3.getString(4) + " " + resultSet3.getString(5) + " " + resultSet3.getString(6) + " " + resultSet3.getString(7))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Cybineer\Desktop\Project_0_Scala_Game\src\main\scala\Project_0_Scala_Game.scala:291:163: value getString is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m                 print(resultSet3.getString(1) + " " + resultSet3.getString(2) + " " + resultSet3.getString(3) + " " + resultSet3.getString(4) + " " + resultSet3.getString(5) + " " + resultSet3.getString(6) + " " + resultSet3.getString(7))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                                                                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Cybineer\Desktop\Project_0_Scala_Game\src\main\scala\Project_0_Scala_Game.scala:291:195: value getString is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m                 print(resultSet3.getString(1) + " " + resultSet3.getString(2) + " " + resultSet3.getString(3) + " " + resultSet3.getString(4) + " " + resultSet3.getString(5) + " " + resultSet3.getString(6) + " " + resultSet3.getString(7))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                                                                                                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Cybineer\Desktop\Project_0_Scala_Game\src\main\scala\Project_0_Scala_Game.scala:291:227: value getString is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m                 print(resultSet3.getString(1) + " " + resultSet3.getString(2) + " " + resultSet3.getString(3) + " " + resultSet3.getString(4) + " " + resultSet3.getString(5) + " " + resultSet3.getString(6) + " " + resultSet3.getString(7))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                                                                                                                                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m7 errors found[0m
