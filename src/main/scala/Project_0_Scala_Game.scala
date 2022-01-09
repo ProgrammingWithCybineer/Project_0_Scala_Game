@@ -11,6 +11,7 @@ import com.mysql.cj.xdevapi.UpdateStatement
 object Project_0_Scala_Game {
  
     def main(args: Array[String]): Unit = {
+        // declaring all variables needed for the game
         var scanner = new Scanner(System.in)
         var name = ""
         var fairy = ""
@@ -27,7 +28,7 @@ object Project_0_Scala_Game {
         val driver = "com.mysql.jdbc.Driver"
         val url = "jdbc:mysql://localhost:3306/Project0_Scala_Game" // Modify for whatever port you are running your DB on
         val username = "root"
-        val password = "ProgramWithNoFears920" // Update to include your password
+        val password = "#################" // Update to include your password
         var connection:Connection = null  
 
     
@@ -72,7 +73,7 @@ object Project_0_Scala_Game {
             //statement.executeUpdate("INSERT INTO Players (playerName, age) VALUES (" +playerName+", " +age+");")
             
             
-
+            // Welcome screen to the game
             println("")
             println("    ********************************************************")
             println("                                                          ")
@@ -84,8 +85,6 @@ object Project_0_Scala_Game {
             println("    ********************************************************")
             println("")
 
-
-    
             println(" You have started the game with a health level of 3")
             println(" ")
             println(" The goal is to get to the end of the game with as many health points as possible")
@@ -94,9 +93,9 @@ object Project_0_Scala_Game {
             println(" ")
             
 
-            //while (health == 3){ // LOOK INTO THIS
+            
                 
-                
+                // Game loop
                 while (game){
                     println(" ")
                     println(" As the game starts you find yourself in a dark forest. As you roam this forest you start to notice weird creatures")
@@ -108,7 +107,7 @@ object Project_0_Scala_Game {
                     println(" The first create is a fairy do you pet it or do not pet")
                     var fairy =  (scanner.nextLine())
                     val resultSet4 = statement.executeUpdate("UPDATE Players SET fairy = ('"+fairy+"') WHERE playerName = ('"+playerName+"') ;")    
-                        // NEED TO ADD THIS CHOICE INTO DATABASE
+                        
                         if (fairy == "pet it"){
                             babyDragon()
                             
@@ -166,7 +165,7 @@ object Project_0_Scala_Game {
 
                     }           
                         
-
+                        // do not pet baby dragon
                         def goldUnicorn(){
                             println("")
                             println("Good Choice... Why would anyone pet a baby dragon. The mommy dragon would have eaten you.")
@@ -221,7 +220,7 @@ object Project_0_Scala_Game {
                             }
                         }
 
-
+                        // pet baby dragon
                         def goldUnicornDamage(){
                             println("")
                             println("Why would anyone pet a baby dragon. The mommy dragon could have eaten you")
@@ -269,10 +268,9 @@ object Project_0_Scala_Game {
                         // create the statement, and run the select query
                 
                 }
-            //}
+            
 
-            //val statement = connection.createStatement()
-            //val resultSet = statement.executeUpdate("SELECT * FROM Players ") // Change query to your table
+            
             val resultSet1 = statement.executeQuery("SELECT * FROM Players")
             while ( resultSet1.next() ) {
                 print(resultSet1.getString(1) + " " + resultSet1.getString(2) + " " + resultSet1.getString(3) + " " + resultSet1.getString(4) + " " + resultSet1.getString(5) + " " + resultSet1.getString(6) + " " + resultSet1.getString(7))
@@ -280,10 +278,7 @@ object Project_0_Scala_Game {
                 println("")
             }
 
-                
-        //}catch {
-            //    case e: Exception => e.printStackTrace
-            //}
+            // Query to delete database entry where play age is less then 5
             println("")
             println(" Next query will delete all players game who's age is less than 2")
             println("")
