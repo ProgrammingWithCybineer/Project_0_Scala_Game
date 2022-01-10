@@ -3,6 +3,8 @@ import Console.{BLUE, GREEN, RED, UNDERLINED,RESET}
 import java.sql.DriverManager
 import java.sql.Connection
 import com.mysql.cj.xdevapi.UpdateStatement
+import java.io.File
+import java.io.PrintWriter
 
 
 
@@ -22,13 +24,14 @@ object Project_0_Scala_Game {
         var playerName = ""
         var endGameHealth = 0
         var playerHealth = 3
+        val log = new PrintWriter(new File("Game.log"))
 
         var health = 3
         var game = true
         val driver = "com.mysql.jdbc.Driver"
         val url = "jdbc:mysql://localhost:3306/Project0_Scala_Game" // Modify for whatever port you are running your DB on
         val username = "root"
-        val password = "######################" // Update to include your password
+        val password = "ProgramWithNoFears920" // Update to include your password
         var connection:Connection = null  
 
     
@@ -57,7 +60,9 @@ object Project_0_Scala_Game {
             scanner.nextLine()
             //statement.executeUpdate("INSERT INTO Players (age) VALUES (" +age+");")
             val resultSet2 = statement.executeUpdate("INSERT INTO Players (playerName, age) VALUES ('"+playerName+"', '"+age+"');")
+            log.write("Executing 'INSERT INTO Players (playerName, age) VALUES ('"+playerName+"', '"+age+"');\n")
             val resultSet3 = statement.executeUpdate("UPDATE Players SET playerHealth = ('"+playerHealth+"');")
+            log.write("Executing 'UPDATE Players SET playerHealth = ('"+playerHealth+"');\n")
 
             // create the statement, and run the select query
             
@@ -100,7 +105,7 @@ object Project_0_Scala_Game {
                     println(" The first creature is a fairy do you pet it or do not pet")
                     var fairy =  (scanner.nextLine())
                     val resultSet4 = statement.executeUpdate("UPDATE Players SET fairy = ('"+fairy+"') WHERE playerName = ('"+playerName+"') ;")    
-                        
+                    log.write("Executing 'UPDATE Players SET fairy = ('"+fairy+"') WHERE playerName = ('"+playerName+"') ;\n")    
                         if (fairy == "pet it"){
                             babyDragon()
                             
@@ -128,7 +133,8 @@ object Project_0_Scala_Game {
                         println(" The next create that comes to you in a baby dragon. Do you pet it or do not pet")
                         println("")
                         var babyDragon =  (scanner.nextLine())
-                        val resultSet5 = statement.executeUpdate("UPDATE Players SET babyDragon = ('"+babyDragon+"') WHERE playerName = ('"+playerName+"') ;") 
+                        val resultSet5 = statement.executeUpdate("UPDATE Players SET babyDragon = ('"+babyDragon+"') WHERE playerName = ('"+playerName+"') ;")
+                        log.write("Executing 'UPDATE Players SET babyDragon = ('"+babyDragon+"') WHERE playerName = ('"+playerName+"') ;\n")   
                         if (babyDragon == "pet it"){
                             println(" You are brave but that was a silly choice")
                             takeDamage()
@@ -150,7 +156,8 @@ object Project_0_Scala_Game {
                         println(" The next create that comes to you in a baby dragon. Do you pet it or do not pet")
                         println("")
                         var babyDragonDamage =  (scanner.nextLine())
-                        val resultSet5 = statement.executeUpdate("UPDATE Players SET babyDragon = ('"+babyDragonDamage+"') WHERE playerName = ('"+playerName+"') ;") 
+                        val resultSet5 = statement.executeUpdate("UPDATE Players SET babyDragon = ('"+babyDragonDamage+"') WHERE playerName = ('"+playerName+"') ;")
+                        log.write("Executing 'UPDATE Players SET babyDragon = ('"+babyDragonDamage+"') WHERE playerName = ('"+playerName+"') ;\n")   
                         if (babyDragonDamage == "pet it"){
                             println(" You are brave but silly")
                             takeDamage()
@@ -173,7 +180,8 @@ object Project_0_Scala_Game {
                             println("")
                             println("The final creature in your test is a Gold Unicorn. pet it or do not pet")
                             var goldUnicorn =  (scanner.nextLine())
-                            val resultSet6 = statement.executeUpdate("UPDATE Players SET gold_Unicorn = ('"+goldUnicorn+"') WHERE playerName = ('"+playerName+"') ;") 
+                            val resultSet6 = statement.executeUpdate("UPDATE Players SET gold_Unicorn = ('"+goldUnicorn+"') WHERE playerName = ('"+playerName+"') ;")
+                            log.write("Executing 'UPDATE Players SET gold_Unicorn = ('"+goldUnicorn+"') WHERE playerName = ('"+playerName+"') ;\n")  
 
                             //didnt pet fairy, pet baby dragon, pet gold unicorn
                             if (goldUnicorn  == "pet it" && health > 0 ){
@@ -185,6 +193,7 @@ object Project_0_Scala_Game {
                                 println("")
                                 println(" Great Job. You have WON THE GAME")
                                 val resultSet7 = statement.executeUpdate("UPDATE Players SET endGameHealth = ('"+health+"') WHERE playerName = ('"+playerName+"') ;")
+                                log.write("Executing 'UPDATE Players SET endGameHealth = ('"+health+"') WHERE playerName = ('"+playerName+"') ;\n")  
                                 game = false
 
                             //pet fairy, didn't pet baby dragon, didn't pet gold unicorn    
@@ -196,6 +205,7 @@ object Project_0_Scala_Game {
                                 println("")
                                 println(" Total health points left: " + health )
                                 val resultSet7 = statement.executeUpdate("UPDATE Players SET endGameHealth = ('"+health+"') WHERE playerName = ('"+playerName+"') ;")
+                                log.write("Executing 'UPDATE Players SET endGameHealth = ('"+health+"') WHERE playerName = ('"+playerName+"') ;\n")
                                 game = false
                                 // DOESNT END GAME LOOP
 
@@ -208,6 +218,7 @@ object Project_0_Scala_Game {
                                 println("")
                                 println(" Total health points left: " + health )
                                 val resultSet7 = statement.executeUpdate("UPDATE Players SET endGameHealth = ('"+health+"') WHERE playerName = ('"+playerName+"') ;")
+                                log.write("Executing 'UPDATE Players SET endGameHealth = ('"+health+"') WHERE playerName = ('"+playerName+"') ;\n")
                                 game = false
 
                             // didn't pet fairy, pet baby dragon, didnt pet gold unicorn    
@@ -219,6 +230,7 @@ object Project_0_Scala_Game {
                                 println("")
                                 println(" Total health points left: " + health )
                                 val resultSet7 = statement.executeUpdate("UPDATE Players SET endGameHealth = ('"+health+"') WHERE playerName = ('"+playerName+"') ;")
+                                log.write("Executing 'UPDATE Players SET endGameHealth = ('"+health+"') WHERE playerName = ('"+playerName+"') ;\n")
                                 game = false
                             }
                         }
@@ -231,6 +243,7 @@ object Project_0_Scala_Game {
                             println("The final creature in your test is a Gold Unicorn. pet it or do not pet")
                             var goldUnicornDamage  =  (scanner.nextLine())
                             val resultSet6 = statement.executeUpdate("UPDATE Players SET gold_Unicorn = ('"+goldUnicornDamage+"') WHERE playerName = ('"+playerName+"') ;")
+                            log.write("Executing 'UPDATE Players SET gold_Unicorn = ('"+goldUnicornDamage+"') WHERE playerName = ('"+playerName+"') \n")
 
                             //didnt pet fairy, pet baby dragon, pet gold unicorn
                             if (goldUnicornDamage == "pet it"){
@@ -243,6 +256,7 @@ object Project_0_Scala_Game {
                                 println(" Total health points left: " + health )
                                 println("")
                                 val resultSet7 = statement.executeUpdate("UPDATE Players SET endGameHealth = ('"+health+"') WHERE playerName = ('"+playerName+"') ;")
+                                log.write("Executing 'UPDATE Players SET endGameHealth = ('"+health+"') WHERE playerName = ('"+playerName+"') ;\n")
                                 game = false
 
                             
@@ -256,6 +270,7 @@ object Project_0_Scala_Game {
                                 println(" Total health points left: " + health )
                                 println("")
                                 val resultSet7 = statement.executeUpdate("UPDATE Players SET endGameHealth = ('"+health+"') WHERE playerName = ('"+playerName+"') ;")
+                                log.write("Executing 'UPDATE Players SET endGameHealth = ('"+health+"') WHERE playerName = ('"+playerName+"') ;\n")
                                 game = false
 
                             // didn't pet fairy, pet baby dragon, didnt pet gold unicorn    
@@ -268,6 +283,7 @@ object Project_0_Scala_Game {
                                 println(" Total health points left: " + health )
                                 println("")
                                 val resultSet7 = statement.executeUpdate("UPDATE Players SET endGameHealth = ('"+health+"') WHERE playerName = ('"+playerName+"') ;")
+                                log.write("Executing 'UPDATE Players SET endGameHealth = ('"+health+"') WHERE playerName = ('"+playerName+"') ;\n")
                                 game = false
                             }
                         }
@@ -278,10 +294,12 @@ object Project_0_Scala_Game {
 
             
             val resultSet1 = statement.executeQuery("SELECT * FROM Players")
+            log.write("Executing 'SELECT * FROM Players' ;\n")
             while ( resultSet1.next() ) {
                 print(resultSet1.getString(1) + " " + resultSet1.getString(2) + " " + resultSet1.getString(3) + " " + resultSet1.getString(4) + " " + resultSet1.getString(5) + " " + resultSet1.getString(6) + " " + resultSet1.getString(7))
                 println("")
                 println("")
+                
             }
 
             // Query to delete database entry where play age is less then 5
@@ -290,7 +308,9 @@ object Project_0_Scala_Game {
             println("")
             // this is for the total number of people who ended the game with health above 2
             val resultSet8 =  statement.executeUpdate("DELETE FROM Players WHERE age < 2 ;")
+            log.write("Executing 'DELETE FROM Players WHERE age < 2 \n")
             val resultSet9 = statement.executeQuery("SELECT * FROM Players")
+            log.write("Executing  'SELECT * FROM Players' ;\n")
             while ( resultSet9.next() ) {
                  print(resultSet9.getString(1) + " " + resultSet9.getString(2) + " " + resultSet9.getString(3) + " " + resultSet9.getString(4) + " " + resultSet9.getString(5) + " " + resultSet9.getString(6) + " " + resultSet9.getString(7))
                  println("")
@@ -303,6 +323,9 @@ object Project_0_Scala_Game {
 
             }
                 connection.close()
+
+
+            log.close()
 
       
    
