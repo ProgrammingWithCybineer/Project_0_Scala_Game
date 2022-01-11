@@ -31,7 +31,7 @@ object Project_0_Scala_Game {
         val driver = "com.mysql.jdbc.Driver"
         val url = "jdbc:mysql://localhost:3306/Project0_Scala_Game" // Modify for whatever port you are running your DB on
         val username = "root"
-        val password = "ProgramWithNoFears920" // Update to include your password
+        val password = "##################" // Update to include your password
         var connection:Connection = null  
 
     
@@ -115,6 +115,7 @@ object Project_0_Scala_Game {
                             takeDamage()
                             babyDragonDamage()
                         }
+                    // taking damage method    
                     def takeDamage(): Unit = {
                         println("")
                         println( playerName + " has taken damage!!!")
