@@ -31,7 +31,7 @@ object Project_0_Scala_Game {
         val driver = "com.mysql.jdbc.Driver"
         val url = "jdbc:mysql://localhost:3306/Project0_Scala_Game" // Modify for whatever port you are running your DB on
         val username = "root"
-        val password = "##################" // Update to include your password
+        val password = "###########################" // Update to include your password
         var connection:Connection = null  
 
     
@@ -305,11 +305,11 @@ object Project_0_Scala_Game {
 
             // Query to delete database entry where play age is less then 5
             println("")
-            println(" Next query will delete all players game who's age is less than 2")
+            println(" Next query will delete all players game who's age is less than 4")
             println("")
             // this is for the total number of people who ended the game with health above 2
-            val resultSet8 =  statement.executeUpdate("DELETE FROM Players WHERE age < 2 ;")
-            log.write("Executing 'DELETE FROM Players WHERE age < 2 \n")
+            val resultSet8 =  statement.executeUpdate("DELETE FROM Players WHERE age < 4 ;")
+            log.write("Executing 'DELETE FROM Players WHERE age < 2' \n")
             val resultSet9 = statement.executeQuery("SELECT * FROM Players")
             log.write("Executing  'SELECT * FROM Players' ;\n")
             while ( resultSet9.next() ) {

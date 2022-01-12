@@ -1,9 +1,9 @@
-Executing 'INSERT INTO Players (playerName, age) VALUES ('Selena F', '1');
+Executing 'INSERT INTO Players (playerName, age) VALUES ('Selena', '41');
 Executing 'UPDATE Players SET playerHealth = ('3');
-Executing 'UPDATE Players SET fairy = ('do not pet') WHERE playerName = ('Selena F') ;
-Executing 'UPDATE Players SET babyDragon = ('pet it') WHERE playerName = ('Selena F') ;
-Executing 'UPDATE Players SET gold_Unicorn = ('do not pet') WHERE playerName = ('Selena F') 
-Executing 'UPDATE Players SET endGameHealth = ('1') WHERE playerName = ('Selena F') ;
+Executing 'UPDATE Players SET fairy = ('pet it') WHERE playerName = ('Selena') ;
+Executing 'UPDATE Players SET babyDragon = ('pet it') WHERE playerName = ('Selena') ;
+Executing 'UPDATE Players SET gold_Unicorn = ('do not pet') WHERE playerName = ('Selena') 
+Executing 'UPDATE Players SET endGameHealth = ('2') WHERE playerName = ('Selena') ;
 Executing 'SELECT * FROM Players' ;
-Executing 'DELETE FROM Players WHERE age < 2 
+Executing 'DELETE FROM Players WHERE age < 2' 
 Executing  'SELECT * FROM Players' ;

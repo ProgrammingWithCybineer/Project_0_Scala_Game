@@ -1,1 +1,11 @@
-[0m[[0m[0mdebug[0m] [0m[0mJar uptodate: C:\Users\Cybineer\Desktop\Project_0_Scala_Game\target\scala-2.11\project_0_scala_game-_2.11-0.1.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mPackaging C:\Users\Cybineer\Desktop\Project_0_Scala_Game\target\scala-2.11\project_0_scala_game-_2.11-0.1.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Hero.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Cybineer\Desktop\Project_0_Scala_Game\target\scala-2.11\classes\Hero.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	HeroTraits.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Cybineer\Desktop\Project_0_Scala_Game\target\scala-2.11\classes\HeroTraits.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Project_0_Scala_Game$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Cybineer\Desktop\Project_0_Scala_Game\target\scala-2.11\classes\Project_0_Scala_Game$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Project_0_Scala_Game.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Cybineer\Desktop\Project_0_Scala_Game\target\scala-2.11\classes\Project_0_Scala_Game.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
