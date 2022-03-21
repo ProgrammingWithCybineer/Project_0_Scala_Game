@@ -1,5 +1,5 @@
 # Project_0_Scala_Game
-This a game of choice using scala. The game data ie: users name, age, and choices made are then saved into a MySQL database
+  * This a game of choice using scala. The game data ie: users name, age, and choices made are then saved into a MySQL database
 
 #### Technologies Used
   *	Scala 2.11.12
